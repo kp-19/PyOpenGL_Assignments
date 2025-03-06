@@ -25,7 +25,8 @@ class Window:
 
         self.window = glfw.create_window(self.windowWidth, self.windowWidth, "Space Heist", None, None)
         # Pass 2nd last parameter as 'monitor' instead of None for fullscreen experience
-
+        glfw.set_input_mode(self.window, glfw.CURSOR, glfw.CURSOR_DISABLED)
+        
         if not self.window:
             glfw.terminate()
             print("Glfw window can't be created")
